@@ -25,7 +25,7 @@
 ### Блок-схема
 ![Блок-схема алгоритма](lab2chema.png) 
 
- [https://drive.google.com/file/d/12CMkTxJuG6qfrYX-jl5JK99iyuzK-1Ib/view?usp=sharing^](# "как lab_2_schema.png")
+[Блок-схема алгоритма](https://drive.google.com/file/d/12CMkTxJuG6qfrYX-jl5JK99iyuzK-1Ib/view?usp=sharing) 
 ## 2. Реализация программы
 
 #include <stdio.h>
