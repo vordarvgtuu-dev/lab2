@@ -23,7 +23,9 @@
 9. **Вывести результаты расчетов** с подстановкой всех значений в текст (цена билетов, количество пассажиров, выручка по классам, общая сумма).
 10. **Конец**
 ### Блок-схема
-![Блок-схема алгоритма](https://drive.google.com/file/d/12CMkTxJuG6qfrYX-jl5JK99iyuzK-1Ib/view?usp=sharing) 
+![Блок-схема алгоритма](lab2schema.png) 
+
+ [https://drive.google.com/file/d/12CMkTxJuG6qfrYX-jl5JK99iyuzK-1Ib/view?usp=sharing^](# "как lab_2_schema.png")
 ## 2. Реализация программы
 
 #include <stdio.h>
