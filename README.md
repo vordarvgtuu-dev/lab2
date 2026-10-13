@@ -20,7 +20,7 @@
 
 [Блок-схема алгоритма](https://drive.google.com/file/d/12CMkTxJuG6qfrYX-jl5JK99iyuzK-1Ib/view?usp=sharing) 
 ## 2. Реализация программы
-
+```
 #include <stdio.h>
 #include <windows.h> // не работает #include <locale.h>
 
@@ -37,6 +37,7 @@ int main() {
     printf(" Цена билета эконом. класса: %.2f фунтов\n Цена билета первого класса: %.2f фунтов\n Пассажиров эконом. класса: %.0f\n Пассажиров первого класса: %.0f\n\n Выручка билетов с эконом. класса: %.2f фунтов\n Выручка с билетов первого класса: %.2f фунтов\n\n Общая сумма: %.2f фунтов\n ", x, firstClass_price, secondClass_passengers, firstClass_passengers, secondClass_revenue, firstClass_revenue, total_sum);
     return 0;
 }
+```
 ## 3. Результаты работы программы
 
  Цена билета эконом. класса: 100.00 фунтов
