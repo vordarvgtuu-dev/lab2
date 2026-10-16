@@ -1,47 +1,54 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <windows.h> 
-
-int task0() {
-    printf("Деление и остаток\n");
-    printf("%d разделить %d (целочисленно) = %d\n", 5, 2, 5 / 2);
-    printf("%d разделить %d (с дробной частью) = %.2f\n", 5, 2, (float)5 / 2);
-    printf("Остаток от %d %% %d = %d\n", 5, 2, 5 % 2);
-    
-    printf("\nВторой вид дюймов\n");
-    float inches_eng = 10.0;
-    float inches_fr = 10.0;
-    printf("Английские дюймы: %.2f\n", inches_eng * 2.54); 
-    printf("Французские дюймы: %.2f\n", inches_fr * 2.7);  
-    return 0;
-}
+#include <locale.h> 
 
 int task1() {
-    int N, K;
-    N = 14;
-    K = 52;
-    printf("сейчас %d часов %d минут 00 секунд\n", N, K);
-    printf("идет %d минут суток\n", N * 60 + K);
-    printf("до полночи %d часов и %d минут\n", 24 - N, 60 - K);
-    printf("с 8:00 прошло %d секунд\n", ((N - 8) * 60 * 60) + (K * 60));
-    printf("Текущий час = %10.2f и текущая минута = %10.2f часа\n", N / 24., K / 60.);
+    puts("Задание 1:");
+    printf("123\n");
+    printf("1\n2\n3\n");
+    printf("\t1\n\t\t2\n\t\t\t3\n");
+    printf("%1d\n%2d\n%3d\n%4d\n", 1, 2, 3, 4);
+    printf("%10.3f\n", 12.234657);
+    printf("%10.5f\n", 12.234657);
+    printf("Остаток от деления %d на %d равен %d\n", 5, 2, 5 % 2);
+    printf("%d разделить %d = %d\n", 7, 5, 7 / 5);
+    printf("%d умножить %d = %d\n", 2000, 4, 2000 * 4);
+    printf("%g разделить %e равно %f\n", 5., 2000000., 5. / 2000000);
+    printf("%d разделить %d равно %d\n", 5, 2000000, 5 / 2000000); // d
+    printf("%f разделить %f равно %f\n", 5., 2000000., 5. / 2000000); // f
+    printf("%g разделить %g равно %g\n", 5., 2000000., 5. / 2000000); // g
+    printf("%e разделить %e равно %e\n", 5., 2000000., 5. / 2000000); // e
     return 0;
 }
 
 int task2() {
-    float k, n, L, m;
-    n = 4.;
-    L = 323.;
-    k = n / L;
-    m = n / L;
-    printf("Дано:\n%.f\n%.f\n\nРешение:\n%+0*.*f\n", n, L, 8, 3, m);
+    puts("\nЗадание 2: Вывод времени");
+    int N = 14, K = 52; // Текущее время: 14 часов 52 минуты
+    printf("Сейчас %d часов %d минут 00 секунд\n", N, K);
+    printf("Идет %d минута суток\n", N * 60 + K);
+    int minutes_left = 24 * 60 - (N * 60 + K);
+    int hours_left = minutes_left / 60;
+    int mins_left = minutes_left % 60;
+    printf("До полуночи осталось %d часов и %d минут\n", hours_left, mins_left);
+    printf("С 8.00 прошло %d секунд\n", ((N - 8) * 60 * 60) + (K * 60));
+    printf("Текущий час = %.2f суток\nТекущая минута = %.2f часа\n", N / 24., K / 60.);
     return 0;
 }
 
-int main()
-{
-    SetConsoleOutputCP(65001); 
-    task0();
+int task3() {
+    puts("\nЗадание 3: Деление числа n на L");
+    float n = 4., L = 323.;
+    float m = n / L;
+    printf("Дано:\n%8.2f\n%8.2f\n", n, L);
+    printf("Результат:\n%-+8.3f\n", m);
+    return 0;
+}
+
+
+int main() {
+    setlocale(LC_ALL, "RUS"); 
     task1();
     task2();
+    task3();
     return 0;
 }
